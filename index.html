@@ -5,9 +5,79 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donut Clicker</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="container"></div>
+    <nav class="header-nav">
+      <ul>
+        <li>
+          <div class="header-link" id="company-info-link">
+            Company's information
+          </div>
+        </li>
+        <li>
+          <a
+            href="https://orteil.dashnet.org/cookieclicker/"
+            target="_blank"
+            class="header-link"
+            >Inspiration: Cookie Clicker</a
+          >
+        </li>
+        <li>
+          <div class="header-link dropdown-link" id="developer-dropdown">
+            Developer
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <div class="modal" id="company-info-modal">
+      <div class="modal-content">
+        <h2>Company's Information</h2>
+        <p>
+          Thank you for visiting Fred the Baker Baking Company! We are a
+          renowned baking company dedicated to delivering the most delicious and
+          freshly baked goods to our customers. We are located in North Bergen,
+          NJ.
+        </p>
+      </div>
+    </div>
+    <div class="modal" id="developer-modal">
+      <div class="modal-content">
+        <h2>About the Developer</h2>
+        <p>Hi! My name is Kris Cuevas.</p>
+        <p>For more information, visit:</p>
+        <ul>
+          <li>
+            <a href="https://tlc67.github.io" target="_blank">Portfolio</a>
+          </li>
+          <li>
+            <a href="https://github.com/tlc67" target="_blank">GitHub</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <container>
+      <header>
+        <div>
+          <h1>Number of Donuts</h1>
+          <div class="donutCount"></div>
+          <button class="donutButton">Click for a Donut</button>
+        </div>
+        <div>
+          <h1>Auto-Clickers</h1>
+          <div class="autoClickerCount"></div>
+          <button class="autoClickerButton">Purchase an Auto-Clicker</button>
+        </div>
+        <div>
+          <h1>Cost of an Auto-Clicker</h1>
+          <div class="autoClickerCost"></div>
+        </div>
+        <div>
+          <button class="resetGameButton">Reset Game</button>
+        </div>
+      </header>
+    </container>
     <script src="./index.js"></script>
   </body>
 </html>
