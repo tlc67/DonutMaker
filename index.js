@@ -4,11 +4,7 @@ let autoClickerCost = 100;
 let donutsPerClick = 1;
 
 addDonut = () => {
-  if (autoClickerCount == 0) {
-    donutCount += 1;
-  } else {
-    donutCount += autoClickerCount;
-  }
+  donutCount += 1;
 };
 
 addAutoClicker = () => {
@@ -70,33 +66,23 @@ const updateGame = () => {
   }
 };
 
-const clickDonutButton = (button) => {
-  button.addEventListener("click", () => {
-    addDonut();
-    updateGame();
-  });
-};
+donutButton.addEventListener("click", () => {
+  addDonut();
+  updateGame();
+});
 
-const clickAutoClickerButton = (button) => {
-  button.addEventListener("click", () => {
-    addAutoClicker();
-    updateGame();
-  });
-};
+autoClickerButton.addEventListener("click", () => {
+  addAutoClicker();
+  updateGame();
+});
 
-const clickResetGameButton = (button) => {
-  button.addEventListener("click", () => {
-    resetGame();
-    updateGame();
-  });
-};
+resetGameButton.addEventListener("click", () => {
+  resetGame();
+  updateGame();
+});
 
 function countUp() {
   donutCount += autoClickerCount;
   updateGame();
 }
 setInterval(countUp, 1000);
-
-clickDonutButton(donutButton);
-clickAutoClickerButton(autoClickerButton);
-clickResetGameButton(resetGameButton);
